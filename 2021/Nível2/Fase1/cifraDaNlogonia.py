@@ -49,12 +49,6 @@ for letra in palavraParaCifrar:
         else:#se a letra for Z não vai ter mais nenhuma letra pra direita então a vogal deve ser a da esquerda
             novaPalavra+=vogalParaEsquerda
             novaPalavra+="z"#sua próxima consoante deve ser obrigatoriamente Z
-        
     else:
         novaPalavra+=letra
 print(novaPalavra)
-
-                
-
-            
-
