@@ -28,17 +28,18 @@ for letra in palavraParaCifrar:
                 letraParaEsquerda = vogais[vogais.index(alfabeto[e])]
                 break
         if letra != 'z':
-            indexLetraPraDireita = alfabeto.index(letraParaDireita)
-            indexLetraPraEsquerda = alfabeto.index(letraParaEsquerda)
-
-            if distanciaDaConsoanteParaDireita == distanciaDaConsoanteParaEsquerda:
-                novaPalavra+=letraParaEsquerda
-            elif distanciaDaConsoanteParaDireita < distanciaDaConsoanteParaEsquerda:
-                novaPalavra+=letraParaDireita
+            if letraParaDireita != 0:
+                if distanciaDaConsoanteParaDireita == distanciaDaConsoanteParaEsquerda:
+                    novaPalavra+=letraParaEsquerda
+                elif distanciaDaConsoanteParaDireita < distanciaDaConsoanteParaEsquerda:
+                    novaPalavra+=letraParaDireita
+                else:
+                    novaPalavra+=letraParaEsquerda
             else:
                 novaPalavra+=letraParaEsquerda
+
             for a in range (posicaoDaLetraNoAlfabeto+1, len(alfabeto), +1):#próxima consoante
-                if palavraParaCifrar[0] == 'z':
+                if letra == 'z':
                     novaPalavra+= "z"
                     break
                 else:
